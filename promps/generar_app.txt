@@ -1,0 +1,51 @@
+Actúa como un desarrollador Frontend de datos [principiante/experto] en Python, Streamlit y Plotly Express. Escribe el código completo para `app.py` que cargue el conjunto de datos de "data/dataset.csv" y muestre un panel de control interactivo. Te comparto un muestra del conjunto de datos: [renglones de muestra]
+La aplicación debe incluir lo siguiente:
+1.importar streamlit, pandas y plotly al principio del archivo
+2. Cargar los datos desde la ruta `data/dataset.csv`
+3. Un título y un subtítulo muy llamativos con emojis, acordes a la temática de los datos, para eso usa al menos una vez la función st.header().
+4. Un checkbox para mostrar/ocultar una vista previa interactiva del DataFrame filtrado (mostrando las primeras 5 a 10 filas).
+5. Puedes crear un histograma utilizando el siguiente código 
+Puedes añadir estos fragmentos de código: 
+# Crear un histograma utilizando plotly.graph_objects
+# Se crea una figura vacía y luego se añade un rastro de histograma
+fig = go.Figure(data=[go.Histogram(x=car_data['odometer'])])
+
+# Opcional: Puedes añadir un título al gráfico si lo deseas
+fig.update_layout(title_text='Distribución del Odómetro')
+
+# Mostrar el gráfico Plotly
+fig.show()
+Añadido en donde tu consideres, donde siga manteniendo el código funcional. 
+
+6. Crea un botón que, al hacer clic en él, construya un histograma plotly. Supongo que es con la función st.button(), Para hacerlo, considera utilizar las funciones st.write() y st.plotly_chart().
+Puedes crear un gráfico de dispersión utilizando el siguiente código 
+# Crear un scatter plot utilizando plotly.graph_objects
+# Se crea una figura vacía y luego se añade un rastro de scatter
+fig = go.Figure(data=[go.Scatter(x=car_data['odometer'], y=car_data['price'], mode='markers')])
+Añadido en donde tu consideres, donde siga manteniendo el código funcional.
+# Opcional: Puedes añadir un título al gráfico si lo deseas
+fig.update_layout(title_text='Relación entre Odómetro y Precio')
+
+# Mostrar el gráfico Plotly
+fig.show() 
+Añadido en donde tu consideres, donde siga manteniendo el código funcional. 
+
+8. Agrega otro botón que, al hacer clic en él, construya un gráfico de dispersión plotly considera usar la función st.button() Nuevamente, considera utilizar las funciones las funciones st.write() y st.plotly_chart().
+9. considera reemplazar los botones por casillas de verificación, las cuales están disponibles en streamlit a través de st.checkbox(). Puedes pedirle al usuario o la usuaria que seleccione una casilla de verificación correspondiente a un histograma o un diagrama de dispersión y luego generar un gráfico basado en la casilla de verificación seleccionada. 
+10. Tres gráficos altamente interactivos creados con Plotly Express que se actualicen al cambiar los filtros:
+   - Gráfico 1: Un gráfico de barras horizontales o verticales.
+   - Gráfico 2: Un gráfico circular (Pie chart / Donut chart).
+   - Grafico 3: Un histograma
+11. Los gráficos deben tener un diseño estético profesional y usar el ancho completo de la columna donde se ubiquen.
+12. Tres gráficos altamente interactivos creados con Plotly Express que se actualicen al cambiar los filtros: - Gráfico 1: Un gráfico de barras horizontales o verticales. - Gráfico 2: Un gráfico circular (Pie chart / Donut chart). - Graifoc 3: Un histograma 
+13. Los gráficos deben tener un diseño estético profesional y usar el ancho completo de la columna donde se ubiquen.
+El tipo de datos que voy a usar son estos: 
+price,model_year,model,condition,cylinders,fuel,odometer,transmission,type,paint_color,is_4wd,date_posted,days_listed
+9400,2011.0,bmw x5,good,6,gas,145000.0,automatic,SUV,,1.0,2018-06-23,19
+25500,,ford f-150,good,6,gas,88705.0,automatic,pickup,white,1.0,2018-10-19,50
+5500,2013.0,hyundai sonata,like new,4,gas,110000.0,automatic,sedan,red,,2019-02-07,79
+1500,2003.0,ford f-150,fair,8,gas,,automatic,pickup,,,2019-03-22,9
+14900,2017.0,chrysler 200,excellent,4,gas,80903.0,automatic,sedan,black,,2019-04-02,28
+Y un ejemplo de como quiero que se vea es algo similar a esto.
+https://www.youtube.com/watch?v=bna15Zj6jUI
+si puedes hacer que el código de la pagina sea altamente llamativa con colores que sean acordes a la temática de carros sin perder la estructura que te estoy pidiendo te lo agradezco  
