@@ -67,7 +67,7 @@ div[data-testid="metric-container"]{
 @st.cache_data
 def cargar_datos():
     df = pd.read_csv(
-        "C:\\Users\\hilary\\OneDrive\\Escritorio\\PF_7_edit\\Proyecto7_anuncios_venta_de_coches.-\\vehicles_us.csv")
+        "data/vehicles_us.csv")
     return df
 
 
